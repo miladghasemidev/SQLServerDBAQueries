@@ -1,0 +1,14 @@
+-- Disable sa
+ALTER LOGIN SA DISABLE
+GO
+
+
+--Change sa name
+ALTER LOGIN SA WITH NAME=XSA
+GO
+
+
+-- Reurn to previous
+ALTER LOGIN XSA WITH NAME=SA
+ALTER LOGIN SA ENABLE
+GO
